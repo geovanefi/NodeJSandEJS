@@ -11,7 +11,18 @@
                 <p>
                     Vamos aprender a trabalhar com arquivo EJS
                 </p>
+                <br>
+                <br>
+                <h2><%= subtitles %></h2>
             </div>
+            <ul>
+                <% descricao.forEach(function(detail){ %> <!-- pega a variavel descricao, fazendo um forEach. Depois cria uma funcao criando um novo objeto detail-->
+                    <li class="nav-item">
+                        <strong><%= detail.title %></strong> <%= detail.message %> <!-- cada objeto do javascript misturado com html precisa ser colocado entre <% %> -->
+                    </li>
+                <%}) %>
+                
+            </ul>
         </main>
     </body>
     <%- include('../partials/footer'); %>
